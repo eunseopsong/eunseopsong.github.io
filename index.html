@@ -11,6 +11,10 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       .profile-img {
         width: 100%;
         max-width: 260px;
@@ -41,10 +45,95 @@
         text-align: center;
         font-size: 16px;
         line-height: 1.75;
+        margin-bottom: 8px;
       }
 
       .link-text a {
         font-size: 16px;
+      }
+
+      .category-nav {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+      }
+
+      .category-nav a {
+        margin: 0 10px;
+        font-weight: 500;
+      }
+
+      .section-title {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 32px 0 16px 0;
+      }
+
+      .section-desc {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 14px;
+        color: #444;
+      }
+
+      .entry-table {
+        width: 100%;
+        border: 0;
+        border-spacing: 0px 14px;
+        border-collapse: separate;
+      }
+
+      .thumb-cell {
+        width: 24%;
+        vertical-align: top;
+        padding: 8px 12px 8px 0;
+      }
+
+      .content-cell {
+        width: 76%;
+        vertical-align: top;
+        padding: 8px 0;
+      }
+
+      .entry-thumb {
+        width: 100%;
+        max-width: 170px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .entry-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 6px;
+      }
+
+      .entry-meta {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      .entry-links {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      .entry-desc {
+        font-size: 15px;
+        line-height: 1.75;
+        color: #222;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #e2e2e2;
+        margin: 18px 0 6px 0;
       }
 
       @media (max-width: 768px) {
@@ -57,19 +146,58 @@
         .body-text a,
         .body-text strong,
         .link-text,
-        .link-text a {
+        .link-text a,
+        .category-nav,
+        .category-nav a {
           font-size: 15px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+
+        .entry-title {
+          font-size: 18px;
+        }
+
+        .entry-meta,
+        .entry-links,
+        .entry-desc {
+          font-size: 14px;
+        }
+
+        .entry-table,
+        .entry-table tbody,
+        .entry-table tr,
+        .thumb-cell,
+        .content-cell {
+          display: block;
+          width: 100% !important;
+        }
+
+        .thumb-cell {
+          padding-right: 0;
+          padding-bottom: 6px;
+        }
+
+        .entry-thumb {
+          max-width: 100%;
+          width: 100%;
+          height: 180px;
         }
       }
     </style>
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
       <tbody>
         <tr style="padding:0px">
           <td style="padding:0px">
 
+            <!-- ===================== -->
+            <!-- Hero / Intro Section  -->
+            <!-- ===================== -->
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
                 <tr style="padding:0px">
@@ -95,10 +223,17 @@
                     </p>
 
                     <p class="link-text">
-                      <a href="mailto:lexondms1@g.skku.edu">Email</a> &nbsp;/&nbsp;
+                      <a href="mailto:your_email@example.com">Email</a> &nbsp;/&nbsp;
                       <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
                       <a href="#">Scholar</a> &nbsp;/&nbsp;
-                      <a href="https://github.com/eunseopsong" target="_blank">Github</a>
+                      <a href="https://github.com/eunseopsong" target="_blank">Github</a> &nbsp;/&nbsp;
+                      <a href="https://www.youtube.com/@eunseopsong-ses" target="_blank">Youtube</a>
+                    </p>
+
+                    <p class="category-nav">
+                      <a href="#research">Research</a>
+                      <a href="#instrument">Instrument</a>
+                      <a href="#workout">Workout</a>
                     </p>
                   </td>
 
@@ -114,6 +249,150 @@
                 </tr>
               </tbody>
             </table>
+
+            <!-- ===================== -->
+            <!-- Research Section      -->
+            <!-- ===================== -->
+            <div id="research" style="padding:0 2.5%;">
+              <h2 class="section-title">Research</h2>
+              <p class="section-desc">
+                Current research topics and selected projects related to robotic polishing,
+                pHRI, force control, and intelligent manipulation.
+              </p>
+
+              <table class="entry-table">
+                <tbody>
+                  <tr>
+                    <td class="thumb-cell">
+                      <img src="images/research_example.jpg" alt="Research example" class="entry-thumb">
+                    </td>
+                    <td class="content-cell">
+                      <div class="entry-title">
+                        Force/Torque Sensor-Based Indirect Force Control for Robotic Polishing
+                      </div>
+                      <div class="entry-meta">
+                        <strong>Keywords:</strong> pHRI, Robotic Polishing, Indirect Force Control, Wrist F/T Sensor
+                      </div>
+                      <div class="entry-links">
+                        <a href="#">project page</a> /
+                        <a href="#">paper</a> /
+                        <a href="#">video</a>
+                      </div>
+                      <div class="entry-desc">
+                        This project focuses on intelligent robotic polishing using wrist force/torque sensing and indirect force control.
+                        The goal is to achieve stable contact, improved polishing quality, and adaptive interaction in unstructured industrial environments.
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <hr class="divider">
+
+            <!-- ===================== -->
+            <!-- Instrument Section    -->
+            <!-- ===================== -->
+            <div id="instrument" style="padding:0 2.5%;">
+              <h2 class="section-title">Instrument</h2>
+              <p class="section-desc">
+                Musical instruments, performance recordings, and personal notes I want to organize on this page.
+              </p>
+
+              <table class="entry-table">
+                <tbody>
+                  <tr>
+                    <td class="thumb-cell">
+                      <img src="images/instrument/Piano_main.jpg" alt="Piano main photo" class="entry-thumb">
+                    </td>
+                    <td class="content-cell">
+                      <div class="entry-title">
+                        Piano
+                      </div>
+                      <div class="entry-meta">
+                        <strong>Category:</strong> Performance / Keyboard / Arrangement
+                      </div>
+                      <div class="entry-links">
+                        <a href="#">performance</a> /
+                        <a href="#">playlist</a> /
+                        <a href="#">note</a>
+                      </div>
+                      <div class="entry-desc">
+                        This section can be used to organize piano-related content such as cover performances,
+                        rehearsal clips, arrangement ideas, and practice notes. You can later connect this section
+                        with your YouTube uploads or add a separate page for songs and recordings.
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="thumb-cell">
+                      <img src="images/instrument/Guitar_main.jpg" alt="Guitar main photo" class="entry-thumb">
+                    </td>
+                    <td class="content-cell">
+                      <div class="entry-title">
+                        Guitar
+                      </div>
+                      <div class="entry-meta">
+                        <strong>Category:</strong> Electric Guitar / Solo / Band Session
+                      </div>
+                      <div class="entry-links">
+                        <a href="#">performance</a> /
+                        <a href="#">gear</a> /
+                        <a href="#">note</a>
+                      </div>
+                      <div class="entry-desc">
+                        This section can be used to collect guitar performances, practice clips, tone settings,
+                        session memories, and song-based 기록. Later, you can expand it into subtopics such as
+                        gear setup, favorite pieces, and band performance archives.
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <hr class="divider">
+
+            <!-- ===================== -->
+            <!-- Workout Section       -->
+            <!-- ===================== -->
+            <div id="workout" style="padding:0 2.5%;">
+              <h2 class="section-title">Workout</h2>
+              <p class="section-desc">
+                Personal training logs, routines, and fitness-related notes that I want to organize on this page.
+              </p>
+
+              <table class="entry-table">
+                <tbody>
+                  <tr>
+                    <td class="thumb-cell">
+                      <img src="images/workout_example.jpg" alt="Workout example" class="entry-thumb">
+                    </td>
+                    <td class="content-cell">
+                      <div class="entry-title">
+                        Weekly Strength Routine Example
+                      </div>
+                      <div class="entry-meta">
+                        <strong>Focus:</strong> Upper Body, Lower Body, Progressive Overload, Consistency
+                      </div>
+                      <div class="entry-links">
+                        <a href="#">routine</a> /
+                        <a href="#">log</a> /
+                        <a href="#">notes</a>
+                      </div>
+                      <div class="entry-desc">
+                        This section can be used to organize workout routines, progress summaries, and training reflections.
+                        For example, you can record weekly split schedules, target weights, volume progression,
+                        or simple notes about recovery and body condition.
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <br><br>
 
           </td>
         </tr>
